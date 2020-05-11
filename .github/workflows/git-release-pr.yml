@@ -1,0 +1,27 @@
+name: Try git-release-pr
+
+on:
+  push:
+  branches:
+    - develop
+
+jobs:
+  git-release-pr:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 5
+    # https://github.com/x-motemen/git-pr-release
+    # env でもできるけど file にする
+
+  step:
+  - uses: actions/checkout@v2
+
+  - name: Set up Ruby
+    uses: actions/setup-ruby@v1
+    with:
+      ruby-version: 2.7
+
+  - name: install git-release-pr gem
+    run: gem install git-release-pr
+
+  - name: create release pr
+    run: git-pr-release
