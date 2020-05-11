@@ -1,4 +1,4 @@
-name: Try git-release-pr
+name: Try git-pr-release
 
 on: push
   # push:
@@ -6,7 +6,7 @@ on: push
   #     - develop
 
 jobs:
-  git-release-pr:
+  git-pr-release:
     runs-on: ubuntu-18.04
     timeout-minutes: 5
     # https://github.com/x-motemen/git-pr-release
@@ -20,8 +20,8 @@ jobs:
       with:
         ruby-version: 2.7
 
-    - name: install git-release-pr gem
-      run: gem install git-release-pr
+    - name: install git-pr-release gem
+      run: gem install git-pr-release
 
     - name: create release pr
       run: git-pr-release
