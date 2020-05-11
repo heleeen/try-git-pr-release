@@ -1,5 +1,0 @@
-[pr-release]
-	template = ./release-pr.erb
-[pr-release "branch"]
-	production = master
-	staging = develop
