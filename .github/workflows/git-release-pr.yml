@@ -2,8 +2,8 @@ name: Try git-release-pr
 
 on:
   push:
-  branches:
-    - develop
+    branches:
+      - develop
 
 jobs:
   git-release-pr:
