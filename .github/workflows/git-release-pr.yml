@@ -25,7 +25,7 @@ jobs:
     - name: Set up Ruby
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: 2.6.x
 
     - name: install git-pr-release gem
       run: gem install git-pr-release
