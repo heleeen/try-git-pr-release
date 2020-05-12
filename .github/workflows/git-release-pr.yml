@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-18.04
     timeout-minutes: 5
     env:
-      GIT_PR_RELEASE_TOKEN: ${{ secrets.GIT_PR_RELEASE_TOKEN }}
+      GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
     - uses: actions/checkout@v2
